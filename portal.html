@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!-- =========================================================================
+     ETEC / Centro Paula Souza - Curso Técnico em Desenvolvimento de Sistemas
+     Componente: Desenvolvimento de Sistemas I (Programação Web I) - Agenda 13
+     Estudante: Iraci Berto Gomes
+     Arquivo: portal.html (Meu Portal de Entretenimento Digital)
+     ========================================================================= -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 1. CSS RESET (Eric Meyer) vinculado ANTES da folha de estilo principal (Págs. 24-26 da apostila) -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+
+    <!-- 2. CSS EXTERNO: Folha de estilo principal vinculada via tag <link> (Págs. 10-12 da apostila) -->
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+    <title>Meu Portal de Entretenimento Digital - Iraci Berto Gomes</title>
+
+    <!-- 3. CSS INTERNO: Bloco <style> dentro da tag <head> (Págs. 7-9 da apostila) -->
+    <style>
+        /* Estilo interno para o cabeçalho de apresentação do portal */
+        #cabecalho-portal {
+            background-color: #111827;
+            padding: 22px 2%;
+            border-bottom: 3px solid rgb(6, 135, 209);
+        }
+
+        /* Estilo interno para o parágrafo de subtítulo usando seletor de ID (#) */
+        #subtitulo-portal {
+            text-align: center;
+            color: #e2e8f0;
+            font-size: 1.05em;
+            margin-top: 8px;
+        }
+
+        /* Estilo interno para destacar visualmente cada cartão de conteúdo nas colunas */
+        .item-card {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #27272a;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #3f3f46;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho do Portal contendo exemplo de CSS INLINE (atributo style direto na tag <h1> - Págs. 6-7 e 13) -->
+    <div id="cabecalho-portal">
+        <h1 id="titulo-portal" style="color: #38bdf8; letter-spacing: 1px;">
+            Meu Portal de Entretenimento Digital
+        </h1>
+        <p id="subtitulo-portal">
+            Curadoria de Filmes, Séries, Músicas, Clipes e Games por <strong>Iraci Berto Gomes</strong> — Agenda 13 (CSS &amp; Flexbox)
+        </p>
+    </div>
+
+    <!-- DIV PRINCIPAL: Contêiner Flexbox que organiza as três seções lado a lado (Págs. 29-35 da apostila) -->
+    <div class="principal">
+
+        <!-- =================================================================
+             SEÇÃO 1: FILMES E SÉRIES (Coluna 1)
+             ================================================================= -->
+        <div class="coluna1" id="secao-filmes">
+            <h2 class="titulo-secao">Filmes e Séries</h2>
+
+            <!-- Item 1.1: Senna - 30 Anos -->
+            <div class="item-card">
+                <a href="https://globoplay.globo.com/senna-30-anos/t/PGGSL95QXm/" target="_blank">
+                    <img src="imagens/filmes1_senna.jpg" alt="Documentário Senna 30 Anos no Globoplay">
+                </a>
+                <p class="texto-explicativo">
+                    <strong>Senna – 30 Anos:</strong> Produção especial que homenageia a trajetória histórica, as vitórias inesquecíveis e o legado eterno do tricampeão mundial Ayrton Senna.
+                </p>
+                <p class="fonte">
+                    Fonte: <a href="https://globoplay.globo.com/senna-30-anos/t/PGGSL95QXm/" target="_blank">Globoplay – Senna 30 Anos</a>
+                </p>
+            </div>
+
+            <!-- Item 1.2: Catálogo de Filmes Globoplay -->
+            <div class="item-card">
+                <a href="https://globoplay.globo.com/categorias/filmes/" target="_blank">
+                    <img src="imagens/filmes2_globoplay_filmes.jpg" alt="Catálogo de Filmes Online no Globoplay">
+                </a>
+                <p class="texto-explicativo">
+                    <strong>Filmes Online no Globoplay:</strong> Seleção completa de grandes sucessos do cinema nacional e internacional para assistir em streaming a qualquer momento.
+                </p>
+                <p class="fonte">
+                    Fonte: <a href="https://globoplay.globo.com/categorias/filmes/" target="_blank">Globoplay – Categoria Filmes</a>
+                </p>
+            </div>
+
+            <!-- Item 1.3: Paulo Gustavo Em 3 Atos -->
+            <div class="item-card">
+                <a href="https://globoplay.globo.com/paulo-gustavo-em-3-atos/t/rGmrqybgCS/" target="_blank">
+                    <img src="imagens/filmes3_paulo_gustavo.jpg" alt="Especial Paulo Gustavo Em 3 Atos no Globoplay">
+                </a>
+                <p class="texto-explicativo">
+                    <strong>Paulo Gustavo Em 3 Atos:</strong> Especial emocionante que celebra o talento, o humor contagiante e as obras marcantes de um dos maiores artistas brasileiros.
+                </p>
+                <p class="fonte">
+                    Fonte: <a href="https://globoplay.globo.com/paulo-gustavo-em-3-atos/t/rGmrqybgCS/" target="_blank">Globoplay – Paulo Gustavo</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- =================================================================
+             SEÇÃO 2: MÚSICA E PODCASTS (Coluna 2)
+             ================================================================= -->
+        <div class="coluna2" id="secao-musica">
+            <h2 class="titulo-secao">Música e Podcasts</h2>
+
+            <!-- Item 2.1: Hungria - Amor e Fé -->
+            <div class="item-card">
+                <a href="https://www.youtube.com/watch?v=iZq0u3quAqo&list=RDiZq0u3quAqo&start_radio=1" target="_blank">
+                    <img src="imagens/musica1_hungria.jpg" alt="Clipe Oficial Hungria - Amor e Fé #CheiroDoMato">
+                </a>
+                <p class="texto-explicativo">
+                    <strong>Hungria – Amor e Fé (#CheiroDoMato):</strong> Videoclipe oficial que une poesia musical, superação e melodia marcante em uma produção audiovisual inspiradora.
+                </p>
+                <p class="fonte">
+                    Fonte: <a href="https://www.youtube.com/watch?v=iZq0u3quAqo&list=RDiZq0u3quAqo&start_radio=1" target="_blank">YouTube – Canal Oficial Hungria</a>
+                </p>
+            </div>
+
+            <!-- Item 2.2: Djavan - Sonhar -->
+            <div class="item-card">
+                <a href="https://www.youtube.com/watch?v=qlCMEOxF3Vo" target="_blank">
+                    <img src="imagens/musica2_djavan_sonhar.jpg" alt="Djavan - Sonhar Visualizer Oficial">
+                </a>
+                <p class="texto-explicativo">
+                    <strong>Djavan – Sonhar (Visualizer Oficial):</strong> Obra da Música Popular Brasileira que destaca a sofisticação harmônica e a voz inconfundível de Djavan.
+                </p>
+                <p class="fonte">
+                    Fonte: <a href="https://www.youtube.com/watch?v=qlCMEOxF3Vo" target="_blank">YouTube – Djavan Oficial (Sonhar)</a>
+                </p>
+            </div>
+
+            <!-- Item 2.3: Djavan - Oceano -->
+            <div class="item-card">
+                <a href="https://www.youtube.com/watch?v=MWh78SM5G7k" target="_blank">
+                    <img src="imagens/musica3_djavan_oceano.jpg" alt="Djavan - Oceano Clipe Oficial HD">
+                </a>
+                <p class="texto-explicativo">
+                    <strong>Djavan – Oceano (Clipe Oficial HD):</strong> Um dos maiores clássicos da música brasileira, consagrado pela letra poética e arranjo acústico atemporal.
+                </p>
+                <p class="fonte">
+                    Fonte: <a href="https://www.youtube.com/watch?v=MWh78SM5G7k" target="_blank">YouTube – Djavan Oficial (Oceano)</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- =================================================================
+             SEÇÃO 3: GAMES E TECNOLOGIA (Coluna 3)
+             ================================================================= -->
+        <div class="coluna3" id="secao-games">
+            <h2 class="titulo-secao">Games e Tecnologia</h2>
+
+            <!-- Item 3.1: Banjo-Kazooie Trailer - Nintendo Switch Online -->
+            <div class="item-card">
+                <a href="https://www.youtube.com/watch?v=RWrWuXE6RHw" target="_blank">
+                    <img src="imagens/games1_banjo_kazooie.jpg" alt="Banjo-Kazooie Trailer - Nintendo 64 no Nintendo Switch Online">
+                </a>
+                <p class="texto-explicativo">
+                    <strong>Banjo-Kazooie (Nintendo Switch Online):</strong> Trailer oficial do clássico jogo de aventura 3D do Nintendo 64 remasterizado para a plataforma Nintendo Switch Online.
+                </p>
+                <p class="fonte">
+                    Fonte: <a href="https://www.youtube.com/watch?v=RWrWuXE6RHw" target="_blank">YouTube / Nintendo &amp; Canaltech</a>
+                </p>
+            </div>
+
+            <!-- Item 3.2: Super Mario Odyssey PT-BR no PC -->
+            <div class="item-card">
+                <a href="https://www.youtube.com/watch?v=1jeVmWZ5oAk" target="_blank">
+                    <img src="imagens/games2_super_mario_odyssey.jpg" alt="Super Mario Odyssey localizado em Português no PC">
+                </a>
+                <p class="texto-explicativo">
+                    <strong>Super Mario Odyssey PT-BR:</strong> Demonstração técnica de gameplay e localização em português brasileiro de um dos títulos de plataforma mais premiados dos games.
+                </p>
+                <p class="fonte">
+                    Fonte: <a href="https://www.youtube.com/watch?v=1jeVmWZ5oAk" target="_blank">YouTube – Super Mario Odyssey PT-BR</a>
+                </p>
+            </div>
+
+            <!-- Item 3.3: Guitar Hero 3 no Navegador (Estadão / TecMundo Voxel) -->
+            <div class="item-card">
+                <a href="https://www.estadao.com.br/tecmundo/voxel/guitar-hero-3-ganha-versao-de-navegador-que-roda-de-graca-veja-como-jogar/" target="_blank">
+                    <img src="imagens/games3_guitar_hero.jpg" alt="Guitar Hero 3 ganha versão de navegador que roda de graça - TecMundo Voxel">
+                </a>
+                <p class="texto-explicativo">
+                    <strong>Guitar Hero 3 no Navegador (TecMundo / Voxel):</strong> Novidade tecnológica que permite jogar gratuitamente o clássico jogo musical direto pelo navegador web sem precisar instalar nada.
+                </p>
+                <p class="fonte">
+                    Fonte: <a href="https://www.estadao.com.br/tecmundo/voxel/guitar-hero-3-ganha-versao-de-navegador-que-roda-de-graca-veja-como-jogar/" target="_blank">Estadão / TecMundo Voxel – Guitar Hero 3</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Rodapé identificado por ID (#rodape-portal) com exemplo adicional de CSS Inline -->
+    <div id="rodape-portal">
+        <p style="color: #93c5fd; font-weight: bold;">
+            Desenvolvido por Iraci Berto Gomes — ETEC / Centro Paula Souza — Desenvolvimento de Sistemas I (Agenda 13: CSS, Reset CSS e Flexbox)
+        </p>
+    </div>
+
+</body>
+</html>
+

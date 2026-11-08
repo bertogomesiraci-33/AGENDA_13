@@ -1,0 +1,168 @@
+/* =========================================================================
+   ETEC / Centro Paula Souza - Curso Técnico em Desenvolvimento de Sistemas
+   Componente: Desenvolvimento de Sistemas I (Programação Web I) - Agenda 13
+   Estudante: Iraci Berto Gomes
+   Arquivo: estilo.css (Folha de Estilo Externa Principal)
+   ========================================================================= */
+
+/* 1. CONFIGURAÇÃO GERAL DO CORPO DA PÁGINA (Págs. 17, 21 e 34 da apostila)
+   Define fonte base em 100% (16px padrão do navegador) e cor de fundo em Hexadecimal */
+body {
+    font-size: 100%;
+    background-color: #1e1d20;
+    color: #f1f5f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+/* 2. SELETOR DE ID (#) PARA O TÍTULO PRINCIPAL DO PORTAL (Págs. 18-19 e 35)
+   Identifica de forma única o título principal da página */
+#titulo-portal {
+    text-align: center;
+    color: rgb(6, 135, 209);
+    font-size: 2.3em;
+    font-weight: bold;
+}
+
+/* 3. LAYOUT FLEXBOX NA DIV PRINCIPAL (Págs. 28-35 da apostila + Consolidação IA Gemini)
+   Contêiner principal com Flexbox em linha */
+.principal {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 15px 2%;
+}
+
+/* 4. AGRUPAMENTO DE SELETORES DAS TRÊS COLUNAS (Págs. 22-23 e 34 da apostila + Consolidação IA Gemini)
+   Alinhamento e estrutura de cada coluna */
+.coluna1, .coluna2, .coluna3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 31%;
+}
+
+/* 5. PROPORÇÃO FLEX-GROW E IDENTIDADE VISUAL POR ID DE CADA SEÇÃO (Págs. 30-35)
+   flex-grow: 1 garante que cada uma das 3 colunas ocupe exatamente 1/3 do espaço disponível */
+.coluna1 {
+    flex-grow: 1;
+    width: 31%;
+}
+
+.coluna2 {
+    flex-grow: 1;
+    width: 31%;
+}
+
+.coluna3 {
+    flex-grow: 1;
+    width: 31%;
+}
+
+/* Estilização específica de cada seção utilizando Seletores de ID (#) */
+#secao-filmes {
+    border-top: 4px solid #ef4444;
+}
+
+#secao-musica {
+    border-top: 4px solid #10b981;
+}
+
+#secao-games {
+    border-top: 4px solid #3b82f6;
+}
+
+/* 6. CLASSE (.titulo-secao) PARA PADRONIZAR OS TÍTULOS DAS SEÇÕES (Págs. 18-20) */
+.titulo-secao {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(6, 135, 209);
+    color: white;
+    font-size: 1.45em;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+
+/* Cores personalizadas nos títulos de cada seção combinando ID + Classe */
+#secao-filmes .titulo-secao {
+    background-color: #b91c1c;
+}
+
+#secao-musica .titulo-secao {
+    background-color: #047857;
+}
+
+#secao-games .titulo-secao {
+    background-color: rgb(6, 135, 209);
+}
+
+/* 7. PADRONIZAÇÃO DAS IMAGENS (Pág. 35 da apostila + Consolidação IA Gemini)
+   Garante que todas as imagens se ajustem a 100% da largura da sua coluna sem distorção */
+img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin: 1.5% 0;
+    border-radius: 6px;
+    display: block;
+}
+
+/* 8. CLASSE (.texto-explicativo) PARA OS PARÁGRAFOS DESCRITIVOS (Págs. 17 e 21) */
+.texto-explicativo {
+    font-size: 0.95em;
+    color: #e4e4e7;
+    text-align: left;
+    margin: 8px 0;
+}
+
+.texto-explicativo strong {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* 9. CLASSE (.fonte) PARA PADRONIZAR AS FONTES DAS IMAGENS (Págs. 19-22 da apostila)
+   Utiliza tamanho relativo 0.8em (12.8px) recomendado pelo W3C */
+.fonte {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #a1a1aa;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #3f3f46;
+}
+
+/* 10. PSEUDO-CLASSES DE ESTADO DOS LINKS <a> (Págs. 17 e 35 da apostila) */
+/* Agrupamento de link normal e link já visitado */
+a:link, a:visited {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* Efeito visual quando o usuário passa o mouse por cima do link */
+a:hover {
+    color: #fde047;
+    text-decoration: underline;
+}
+
+/* 11. SELETOR DE ID (#rodape-portal) PARA O RODAPÉ DA PÁGINA */
+#rodape-portal {
+    text-align: center;
+    background-color: #111827;
+    padding: 16px;
+    margin-top: 15px;
+    border-top: 2px solid rgb(6, 135, 209);
+    font-size: 0.9em;
+}
+
